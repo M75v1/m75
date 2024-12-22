@@ -1,0 +1,68 @@
+
+<!DOCTYPE html> 
+<html lang="ar"> 
+<head> 
+<meta charset="UTF-8"> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+<title>WHAT DO YOU WANT</title> 
+<style> 
+body { 
+background-image: url('images/Xx.jpg'); 
+background-size: cover; 
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+display: flex; 
+justify-content: center; 
+align-items: center; 
+height: 99vh; 
+margin: 0; 
+flex-direction: column; /* Make boxes vertical */ 
+} 
+.container { 
+text-align: center; 
+} 
+.box { 
+width: 400px; 
+height: 250px; 
+margin: 22px; 
+padding: 29px; 
+border: 6px solid #02010b; 
+display: block; /* Change to block for vertical alignment */ 
+text-align: center; 
+vertical-align: middle ; 
+line-height: 222px; 
+cursor: pointer; 
+color: #ffffff; 
+background-color: rgba(203, 34, 82, 0.256); /* Slightly transparent */ 
+border-radius: 100px; 
+transition: background-color 0.3s, transform 0.3s; 
+} 
+.box:hover { 
+background-color: rgba(51, 5, 237, 0.231); 
+transform: scale(1.15); /* Enlarge slightly on hover */ 
+} 
+.locked { 
+background-color: rgba(208, 255, 0, 0.45); /* Slightly transparent */ 
+} 
+</style> 
+</head> 
+<body> 
+<div class="container"> 
+<div class="box" onclick="window.location.href='SITE-2.html'"> 
+مجانا 
+</div> 
+<div class="box locked" onclick="unlockBox()"> 
+VIP 
+</div> 
+</div> 
+<script> 
+function unlockBox() { 
+const password = prompt('أدخل كلمة المرور:'); 
+if (password === 'M75') { 
+window.location.href = 'SITE-2.html';
+} else { 
+alert(' كلمة المرور غير صحيحة. يرجي شراء حساب احترافي  من المطور '); 
+} 
+} 
+</script> 
+</body> 
+</html> 

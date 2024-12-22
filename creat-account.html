@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Account</title>
+    <link href="https://fonts.googleapis.com/css2?family=Tangerine" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Tangerine', serif;
+            background: url('images/X.png ') no-repeat center center fixed;
+            background-size: cover;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            position: relative;
+        }
+
+        .register-container {
+            background: rgba(0, 0, 0, 0.8);
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 8px 30px rgba(135, 126, 82, 0.7);
+            width: 450px;
+            z-index: 1;
+            text-align: center;
+            color: #00ff00;
+        }
+
+        .register-container h2 {
+            margin-bottom: 30px;
+            font-size: 35px;
+        }
+
+        .register-container input {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 5px;
+            background-color: rgba(111, 106, 132, 0.929);
+            color: #00ff00;
+            font-size: 18px;
+            transition: background-color 0.3s;
+        }
+
+        .register-container input::placeholder {
+            color: #19bdeaf0;
+        }
+
+        .register-container input:hover {
+            background-color: rgba(102, 0, 255, 0.311);
+        }
+
+        .register-container button {
+            width: 100%;
+            padding: 12px;
+            background-color: #d53434;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 20px;
+            transition: background-color 0.3s;
+        }
+
+        .register-container button:hover {
+            background-color: #4cae4c;
+        }
+
+        .login-link {
+            margin-top: 15px;
+            display: block;
+            color: #00ff00;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        .login-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+<div class="register-container">
+    <h2>Create New Account</h2>
+    <form action="/register" method="POST">
+        <input type="text" name="fullname" placeholder="الاسم الكامل" required>
+        <input type="text" name="username" placeholder="اسم المستخدم" required>
+        <input type="email" name="email" placeholder="البريد الإلكتروني" required>
+        <input type="password" name="password" placeholder="كلمة المرور" required>
+        <input type="password" name="confirm_password" placeholder="تأكيد كلمة المرور" required>
+        <button type="submit">إنشاء حساب</button>
+    </form>
+    <a href="M75.html" class="login-link">هل لديك حساب بالفعل؟ الصفحة الرئيسية</a>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>كورسات برمجة</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url('images/V.jpg');
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+        }
+
+        header {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav a {
+            margin: 0 15px;
+            color: white;
+            text-decoration: none;
+        }
+
+        .languages {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr); /* 5 صناديق في كل صف */
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .language {
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
+            padding: 25px; /* زيادة padding لجعل الصناديق أكبر */
+            text-align: center;
+            transition: transform 0.3s, background-color 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .language:hover {
+            transform: translateY(-5px);
+            background-color: rgba(255, 255, 255, 0.4);
+        }
+
+        .language img {
+            width: 100px; /* عرض الصورة أكبر */
+            height: 100px; /* ارتفاع الصورة أكبر */
+            border-radius: 5px;
+            margin-bottom: 20px; /* زيادة المسافة بين الصورة والنص */
+        }
+
+        .language-name {
+            margin-bottom: 15px; /* زيادة المسافة بين اسم الدورة واسم اللغة */
+            font-size: 18px; /* حجم أكبر لاسم الدورة */
+        }
+
+        .download-text {
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: rgba(0, 0, 0, 0.7);
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>تعلم لغات البرمجة</h1>
+        <nav>
+            <a href="M75.html">الرئيسية</a>
+            <a href="about-programming.html">عن الدورة</a> <!-- رابط صفحة عن الدورة -->
+            
+        </nav>
+    </header>
+
+    <main>
+        <section class="languages">
+            <div class="language">
+                <img src="images/pythoon.jpg" alt="بايثون">
+                <div class="language-name">بايثون</div>
+                <a href="/downloads/pytcour.zip" class="download-text">تحميل الدورة</a> <!-- رابط تحميل -->
+            </div>
+            <div class="language">
+                <img src="images/java.jpg" alt="جافا">
+                <div class="language-name">جافا</div>
+                <a href="java-course.zip" class="download-text">تحميل الدورة</a> <!-- رابط تحميل -->
+            </div>
+            <div class="language">
+                <img src="images/javascript.jpg" alt="جافا سكريبت">
+                <div class="language-name">جافا سكريبت</div>
+                <a href="javascript-course.zip" class="download-text">تحميل الدورة</a> <!-- رابط تحميل -->
+            </div>
+            <div class="language">
+                <img src="images/Csarp.jpg" alt="C#">
+                <div class="language-name">C#</div>
+                <a href="csharp-course.zip" class="download-text">تحميل الدورة</a> <!-- رابط تحميل -->
+            </div>
+            <div class="language">
+                <img src="images/cpp.jpg" alt="C++">
+                <div class="language-name">C++</div>
+                <a href="/downloads/Cplus.zip" class="download-text">تحميل الدورة</a> <!-- رابط تحميل -->
+            </div>
+            <div class="language">
+                <img src="images/php.jpg" alt="PHP">
+                <div class="language-name">PHP</div>
+                <a href="php-course.zip" class="download-text">تحميل الدورة</a> <!-- رابط تحميل -->
+            </div>
+            <div class="language">
+                <img src="images/ruby.jpg" alt="Ruby">
+                <div class="language-name">Ruby</div>
+                <a href="ruby-course.zip" class="download-text">تحميل الدورة</a> <!-- رابط تحميل -->
+            </div>
+            <div class="language">
+                <img src="images/swift.jpg" alt="Swift">
+                <div class="language-name">Swift</div>
+                <a href="swift-course.zip" class="download-text">تحميل الدورة</a> <!-- رابط تحميل -->
+            </div>
+            <div class="language">
+                <img src="images/kotlin.jpg" alt="Kotlin">
+                <div class="language-name">Kotlin</div>
+                <a href="kotlin-course.zip" class="download-text">تحميل الدورة</a> <!-- رابط تحميل -->
+            </div>
+            <div class="language">
+                <img src="images/html.jpg" alt="HTML">
+                <div class="language-name">HTML</div>
+                <a href="html-course.zip" class="download-text">تحميل الدورة</a> <!-- رابط تحميل -->
+            </div>
+            <div class="language">
+                <img src="images/css.jpg" alt="CSS">
+                <div class="language-name">CSS</div>
+                <a href="css-course.zip" class="download-text">تحميل الدورة</a> <!-- رابط تحميل -->
+            </div>
+            <div class="language">
+                <img src="images/sql.jpg" alt="SQL">
+                <div class="language-name">SQL</div>
+                <a href="sql-course.zip" class="download-text">تحميل الدورة</a> <!-- رابط تحميل -->
+            </div>
+            <div class="language">
+                <img src="images/typescript.jpg" alt="TypeScript">
+                <div class="language-name">TypeScript</div>
+                <a href="typescript-course.zip" class="download-text">تحميل الدورة</a> <!-- رابط تحميل -->
+            </div>
+            <div class="language">
+                <img src="images/rust.jpg" alt="Rust">
+                <div class="language-name">Rust</div>
+                <a href="rust-course.zip" class="download-text">تحميل الدورة</a> <!-- رابط تحميل -->
+            </div>
+            <div class="language">
+                <img src="images/go.jpg" alt="Go">
+                <div class="language-name">Go</div>
+                <a href="go-course.zip" class="download-text">تحميل الدورة</a> <!-- رابط تحميل -->
+            </div>
+            <div class="language">
+                <img src="images/perl.jpg" alt="Perl">
+                <div class="language-name">Perl</div>
+                <a href="perl-course.zip" class="download-text">تحميل الدورة</a> <!-- رابط تحميل -->
+            </div>
+            <div class="language">
+                <img src="images/scala.jpg" alt="Scala">
+                <div class="language-name">Scala</div>
+                <a href="scala-course.zip" class="download-text">تحميل الدورة</a> <!-- رابط تحميل -->
+            </div>
+            <div class="language">
+                <img src="images/dart.jpg" alt="Dart">
+                <div class="language-name">Dart</div>
+                <a href="dart-course.zip" class="download-text">تحميل الدورة</a> <!-- رابط تحميل -->
+            </div>
+            <div class="language">
+                <img src="images/shell.jpg" alt="Shell">
+                <div class="language-name">Shell</div>
+                <a href="shell-course.zip" class="download-text">تحميل الدورة</a> <!-- رابط تحميل -->
+            </div>
+            <div class="language">
+                <img src="images/haskell.jpg" alt="Haskell">
+                <div class="language-name">Haskell</div>
+                <a href="haskell-course.zip" class="download-text">تحميل الدورة</a> <!-- رابط تحميل -->
+            </div>
+            <div class="language">
+                <img src="images/elixir.jpg" alt="Elixir">
+                <div class="language-name">Elixir</div>
+                <a href="elixir-course.zip" class="download-text">تحميل الدورة</a> <!-- رابط تحميل -->
+            </div>
+            <div class="language">
+                <img src="images/lua.jpg" alt="Lua">
+                <div class="language-name">Lua</div>
+                <a href="lua-course.zip" class="download-text">تحميل الدورة</a> <!-- رابط تحميل -->
+            </div>
+            <div class="language">
+                <img src="images/r.jpg" alt="R">
+                <div class="language-name">R</div>
+                <a href="r-course.zip" class="download-text">تحميل الدورة</a> <!-- رابط تحميل -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>جميع الحقوق محفوظة M75&copy; 2024</p>
+    </footer>
+</body>
+</html>

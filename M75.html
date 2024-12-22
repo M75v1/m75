@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M75 Login Form</title>
+    <link href="https://fonts.googleapis.com/css2?family=Tangerine" rel="stylesheet"> <!-- خط جديد -->
+    <style>
+        body {
+            font-family: 'Tangerine', serif;
+            background-color: #08150800;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            position: relative;
+            flex-direction: column;
+        }
+
+        .background {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: url('images/R.gif') no-repeat center center;
+            background-size: cover;
+            z-index: 0;
+        }
+
+        .login-container {
+            background: rgba(40, 96, 51, 0.9);
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 8px 30px rgba(135, 126, 82, 0.7);
+            width: 444px;
+            z-index: 1;
+            text-align: center;
+            position: relative;
+        }
+
+        .icon {
+            width: 99px;
+            height: 90px;
+            border-radius: 44%;
+            background-color: #8B4513;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 29px;
+            position: absolute;
+            top: -40px;
+            left: 50%;
+            transform: translateX(-50%);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+            animation: glow 3s ease-in-out infinite alternate;
+        }
+
+        @keyframes glow {
+            from {
+                text-shadow: 0 0 5px #00ff00, 0 0 10px #00ff00, 0 0 15px #00ff00, 0 0 20px #00ff00;
+            }
+            to {
+                text-shadow: 0 0 20px #00ff00, 0 0 30px #00ff00, 0 0 40px #00ff00, 0 0 50px #00ff00;
+            }
+        }
+
+        .login-container h2 {
+            color: #5eff00;
+            margin-bottom: 30px;
+            font-size: 30px;
+        }
+
+        .login-container input {
+            width: 100%;
+            padding: 12px;
+            margin: 9px 0;
+            border: none;
+            border-radius: 5px;
+            background-color: rgba(111, 106, 132, 0.929);
+            color: #00ff00;
+            font-size: 16px;
+            transition: background-color 0.1s;
+        }
+
+        .login-container input::placeholder {
+            color: #19bdeaf0;
+        }
+
+        .login-container input:hover {
+            background-color: rgba(102, 0, 255, 0.311);
+        }
+
+        .login-container button {
+            width: 100%;
+            padding: 12px;
+            background-color: #67d534;
+            color: white;
+            border: none;
+            border-radius: 5px ;
+            cursor: pointer;
+            font-size: 20px;
+            transition: background-color 0.3s;
+        }
+
+        .login-container button:hover {
+            background-color: #4cae4c;
+        }
+
+        .forgot-password {
+            margin-top: 10px;
+        }
+
+        .forgot-password a {
+            color: #00ff00;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .forgot-password a:hover {
+            text-decoration: underline;
+        }
+
+        .create-account-container {
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            z-index: 2;
+            text-align: center;
+            padding: 10px;
+            background-color: #8B4513;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s;
+        }
+
+        .create-account-container:hover {
+            transform: scale(1.25);
+        }
+
+        .create-account {
+            color: #fff;
+            text-decoration: none;
+            font-size: 20px;
+            animation: glow 1s ease-in-out infinite alternate;
+        }
+        .social-icons {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+            margin-top: 20px;
+            z-index: 2;
+        }
+
+        .social-icons a {
+            margin: 5px 0;
+            color: rgb(31, 16, 238);
+            text-decoration: none;
+            font-size: 26px;
+            transition: transform 0.3s;
+        }
+
+        .social-icons a:hover {
+            transform: scale(2.2);
+        }
+
+        .social-label {
+            color: rgb(35, 13, 200);
+            margin-top: 5px;
+            font-size: 14px;
+        }
+
+        .error-message {
+            color: red;
+            margin-top: 10px;
+            display: none;
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+<div class="background"></div>
+
+<div class="login-container">
+    <div class="icon">M75</div>
+    <h1><i>WELCOME BACK !</i><u>🧑‍💻👩‍💻</u> </h1>
+    <form id="loginForm" onsubmit="return validateForm();">
+        <label for="username">اسم المستخدم</label>
+        <input type="text" id="username" name="username" placeholder="اسم المستخدم" required>
+        <label for="password">كلمة المرور</label>
+        <input type="password" id="password" name="password" placeholder="كلمة المرور" required>
+        <button type="submit">تسجيل الدخول</button>
+        <div class="error-message" id="errorMessage">اسم المستخدم أو كلمة المرور غير صحيحة. المرجو أخذ الحسابات الموجودة على حسابنا على تيليغرام أو تويتر.</div>
+    </form>
+    <div class="forgot-password">
+        <a href="https://t.me/c/2425689188/3" target="_blank">هل نسيت كلمة المرور؟</a>
+    </div>
+</div>
+
+<div class="create-account-container">
+    <a href="creat-account.html" 
+    </a>
+</div>
+
+<div class="social-icons">
+    <a href="https://www.instagram.com/m75.zz?igsh=MnUzaDBkcDBuOGRk" target="_blank">
+        <i class="fab fa-instagram"></i>
+    </a>
+    <span class="social-label">@M75.zz</span>
+
+    <a href="https://x.com/M75_aa?s=09" target="_blank">
+        <i class="fab fa-twitter"></i>
+    </a>
+    <span class="social-label">@M75_aa</span>
+
+    <a href="https://t.me/+sx8hMwfl8zY5NmE0" target="_blank">
+        <i class="fab fa-telegram"></i>
+    </a>
+    <span class="social-label">@M75_Telegram</span>
+</div>
+
+<script>
+    function validateForm() {
+        const username = document.getElementById("username").value;
+        const password = document.getElementById("password").value;
+        const errorMessage = document.getElementById("errorMessage");
+
+        if (username === "M75" && password === "M75") {
+            window.location.href = "SITE1.html"; // الانتقال إلى الصفحة الأخرى
+            return false; // منع إرسال النموذج
+        } else {
+            errorMessage.style.display = "block"; // عرض رسالة الخطأ
+            return false; // منع إرسال النموذج
+        }
+    }
+</script>
+
+</body>
+</html>
